@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myHiringContactLabel">Create or edit a HiringContact</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="hiringContact.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">FirstName</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="hiringContact.firstName"
+                    required />
+            <div ng-show="editForm.firstName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.firstName.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lastName">LastName</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="hiringContact.lastName"
+                    required />
+            <div ng-show="editForm.lastName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastName.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nickName">NickName</label>
+            <input type="text" class="form-control" name="nickName" id="field_nickName"
+                    ng-model="hiringContact.nickName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone1">Phone1</label>
+            <input type="text" class="form-control" name="phone1" id="field_phone1"
+                    ng-model="hiringContact.phone1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone2">Phone2</label>
+            <input type="text" class="form-control" name="phone2" id="field_phone2"
+                    ng-model="hiringContact.phone2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email1">Email1</label>
+            <input type="text" class="form-control" name="email1" id="field_email1"
+                    ng-model="hiringContact.email1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_jobTitle">JobTitle</label>
+            <input type="text" class="form-control" name="jobTitle" id="field_jobTitle"
+                    ng-model="hiringContact.jobTitle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_referralSource">ReferralSource</label>
+            <input type="text" class="form-control" name="referralSource" id="field_referralSource"
+                    ng-model="hiringContact.referralSource"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contactType">ContactType</label>
+            <input type="text" class="form-control" name="contactType" id="field_contactType"
+                    ng-model="hiringContact.contactType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email2">Email2</label>
+            <input type="text" class="form-control" name="email2" id="field_email2"
+                    ng-model="hiringContact.email2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_middleName">MiddleName</label>
+            <input type="text" class="form-control" name="middleName" id="field_middleName"
+                    ng-model="hiringContact.middleName"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

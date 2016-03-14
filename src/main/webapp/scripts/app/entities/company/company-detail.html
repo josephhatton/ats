@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span>Company</span> {{company.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Website</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.website}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Industry</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.industry}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Revenue</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.revenue}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Employees</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.employees}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>IsDeleted</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.isDeleted}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

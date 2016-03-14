@@ -1,0 +1,118 @@
+
+<div>
+    <h2><span>WorkHistory</span> {{workHistory.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Company</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.company}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Title</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.title}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StartDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.startDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EndDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.endDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StartingCompensation</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.startingCompensation}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EndingCompensation</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.endingCompensation}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CompensationType</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.compensationType}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Supervisor</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.supervisor}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SupervisorTitle</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.supervisorTitle}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SupervisorPhone</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.supervisorPhone}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Duties</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.duties}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ReasonForLeaving</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{workHistory.reasonForLeaving}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

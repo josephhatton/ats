@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myApplicantLabel">Create or edit a Applicant</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="applicant.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">FirstName</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="applicant.firstName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_middleName">MiddleName</label>
+            <input type="text" class="form-control" name="middleName" id="field_middleName"
+                    ng-model="applicant.middleName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lastName">LastName</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="applicant.lastName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="applicant.title"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email1">Email1</label>
+            <input type="text" class="form-control" name="email1" id="field_email1"
+                    ng-model="applicant.email1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_homePhone">HomePhone</label>
+            <input type="text" class="form-control" name="homePhone" id="field_homePhone"
+                    ng-model="applicant.homePhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cellPhone">CellPhone</label>
+            <input type="text" class="form-control" name="cellPhone" id="field_cellPhone"
+                    ng-model="applicant.cellPhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isDeleted">IsDeleted</label>
+            <input type="number" class="form-control" name="isDeleted" id="field_isDeleted"
+                    ng-model="applicant.isDeleted"
+                    required />
+            <div ng-show="editForm.isDeleted.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.isDeleted.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.isDeleted.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nickName">NickName</label>
+            <input type="text" class="form-control" name="nickName" id="field_nickName"
+                    ng-model="applicant.nickName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_workPhone">WorkPhone</label>
+            <input type="text" class="form-control" name="workPhone" id="field_workPhone"
+                    ng-model="applicant.workPhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email2">Email2</label>
+            <input type="text" class="form-control" name="email2" id="field_email2"
+                    ng-model="applicant.email2"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

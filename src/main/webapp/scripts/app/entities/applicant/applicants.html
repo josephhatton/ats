@@ -1,0 +1,88 @@
+<div>
+    <h2>Applicants</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="applicant.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                       >Create new Applicant
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'atsApp.applicant.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="firstName"><span>FirstName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="middleName"><span>MiddleName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastName"><span>LastName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span>Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email1"><span>Email1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="homePhone"><span>HomePhone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cellPhone"><span>CellPhone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isDeleted"><span>IsDeleted</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nickName"><span>NickName</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="workPhone"><span>WorkPhone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email2"><span>Email2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="applicant in applicants track by applicant.id">
+                    <td><a ui-sref="applicant.detail({id:applicant.id})">{{applicant.id}}</a></td>
+                    <td>{{applicant.firstName}}</td>
+                    <td>{{applicant.middleName}}</td>
+                    <td>{{applicant.lastName}}</td>
+                    <td>{{applicant.title}}</td>
+                    <td>{{applicant.email1}}</td>
+                    <td>{{applicant.homePhone}}</td>
+                    <td>{{applicant.cellPhone}}</td>
+                    <td>{{applicant.isDeleted}}</td>
+                    <td>{{applicant.nickName}}</td>
+                    <td>{{applicant.workPhone}}</td>
+                    <td>{{applicant.email2}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="applicant.detail({id:applicant.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="applicant.edit({id:applicant.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="applicant.delete({id:applicant.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

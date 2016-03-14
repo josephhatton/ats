@@ -1,0 +1,106 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myWorkHistoryLabel">Create or edit a WorkHistory</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="workHistory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_company">Company</label>
+            <input type="text" class="form-control" name="company" id="field_company"
+                    ng-model="workHistory.company"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="workHistory.title"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startDate">StartDate</label>
+                <div class="input-group">
+                    <input id="field_startDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="workHistory.startDate" is-open="datePickerForStartDate.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForStartDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_endDate">EndDate</label>
+                <div class="input-group">
+                    <input id="field_endDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="workHistory.endDate" is-open="datePickerForEndDate.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForEndDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startingCompensation">StartingCompensation</label>
+            <input type="number" class="form-control" name="startingCompensation" id="field_startingCompensation"
+                    ng-model="workHistory.startingCompensation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_endingCompensation">EndingCompensation</label>
+            <input type="number" class="form-control" name="endingCompensation" id="field_endingCompensation"
+                    ng-model="workHistory.endingCompensation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compensationType">CompensationType</label>
+            <input type="number" class="form-control" name="compensationType" id="field_compensationType"
+                    ng-model="workHistory.compensationType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_supervisor">Supervisor</label>
+            <input type="text" class="form-control" name="supervisor" id="field_supervisor"
+                    ng-model="workHistory.supervisor"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_supervisorTitle">SupervisorTitle</label>
+            <input type="text" class="form-control" name="supervisorTitle" id="field_supervisorTitle"
+                    ng-model="workHistory.supervisorTitle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_supervisorPhone">SupervisorPhone</label>
+            <input type="text" class="form-control" name="supervisorPhone" id="field_supervisorPhone"
+                    ng-model="workHistory.supervisorPhone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_duties">Duties</label>
+            <input type="text" class="form-control" name="duties" id="field_duties"
+                    ng-model="workHistory.duties"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_reasonForLeaving">ReasonForLeaving</label>
+            <input type="text" class="form-control" name="reasonForLeaving" id="field_reasonForLeaving"
+                    ng-model="workHistory.reasonForLeaving"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

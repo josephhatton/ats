@@ -1,0 +1,90 @@
+<div>
+    <h2>WorkHistorys</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="workHistory.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                       >Create new WorkHistory
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'atsApp.workHistory.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Company</span></th>
+                    <th><span>Title</span></th>
+                    <th><span>StartDate</span></th>
+                    <th><span>EndDate</span></th>
+                    <th><span>StartingCompensation</span></th>
+                    <th><span>EndingCompensation</span></th>
+                    <th><span>CompensationType</span></th>
+                    <th><span>Supervisor</span></th>
+                    <th><span>SupervisorTitle</span></th>
+                    <th><span>SupervisorPhone</span></th>
+                    <th><span>Duties</span></th>
+                    <th><span>ReasonForLeaving</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="workHistory in workHistorys track by workHistory.id">
+                    <td><a ui-sref="workHistory.detail({id:workHistory.id})">{{workHistory.id}}</a></td>
+                    <td>{{workHistory.company}}</td>
+                    <td>{{workHistory.title}}</td>
+                        <td>{{workHistory.startDate | date:'mediumDate'}}</td>
+                        <td>{{workHistory.endDate | date:'mediumDate'}}</td>
+                    <td>{{workHistory.startingCompensation}}</td>
+                    <td>{{workHistory.endingCompensation}}</td>
+                    <td>{{workHistory.compensationType}}</td>
+                    <td>{{workHistory.supervisor}}</td>
+                    <td>{{workHistory.supervisorTitle}}</td>
+                    <td>{{workHistory.supervisorPhone}}</td>
+                    <td>{{workHistory.duties}}</td>
+                    <td>{{workHistory.reasonForLeaving}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="workHistory.detail({id:workHistory.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="workHistory.edit({id:workHistory.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="workHistory.delete({id:workHistory.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
