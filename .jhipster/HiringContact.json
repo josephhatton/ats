@@ -1,0 +1,71 @@
+{
+    "relationships": [
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+				"required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "nickName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "phone1",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "phone2",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "email1",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 7,
+            "fieldName": "jobTitle",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 8,
+            "fieldName": "referralSource",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 9,
+            "fieldName": "contactType",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 10,
+            "fieldName": "email2",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 11,
+            "fieldName": "middleName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160307185924",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

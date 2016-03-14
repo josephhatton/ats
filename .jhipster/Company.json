@@ -1,0 +1,46 @@
+{
+    "relationships": [
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "industry",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "revenue",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "employees",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 6,
+            "fieldName": "isDeleted",
+             "fieldType": "Integer",
+			"fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160127161244",
+    "dto": "no",
+    "service": "no",
+    "pagination": "yes"
+}

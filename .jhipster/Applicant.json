@@ -1,0 +1,68 @@
+{
+    "relationships": [
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "middleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "email1",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "homePhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "cellPhone",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 8,
+            "fieldName": "isDeleted",
+             "fieldType": "Integer",
+			"fieldValidateRules": [
+                "required"
+            ]
+        },
+		{
+            "fieldId": 9,
+            "fieldName": "nickName",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 10,
+            "fieldName": "workPhone",
+            "fieldType": "String"
+        },
+		{
+            "fieldId": 11,
+            "fieldName": "email2",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160122150410",
+    "dto": "no",
+    "service": "no",
+    "pagination": "yes"
+}

@@ -1,0 +1,70 @@
+{
+    "relationships": [
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "company",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "startingCompensation",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "endingCompensation",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "compensationType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "supervisor",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "supervisorTitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "supervisorPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "duties",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "reasonForLeaving",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160117145123",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

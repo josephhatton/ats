@@ -5,5 +5,21 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160122150410_added_entity_Applicant.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160127161244_added_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160209024309_added_entity_JobOrder.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160224211657_added_entity_Activity.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160224210649_added_entity_ActivityAction.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160122150559_added_entity_Address.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160122150043_added_entity_ApplicantStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160127160912_added_entity_CompanyStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160127161008_added_entity_CompanyType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160307185924_added_entity_HiringContact.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160209023255_added_entity_JobStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160209023116_added_entity_JobType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160204204011_added_entity_Skill.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160204203836_added_entity_SkillCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160117145123_added_entity_WorkHistory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160308183437_added_entity_WorkStatus.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>
